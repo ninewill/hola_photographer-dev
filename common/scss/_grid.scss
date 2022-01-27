@@ -462,22 +462,21 @@
       width: 67%;
     }
 
-		@include min-width(1440px) {
-			width: 75%;
-		}
+    @include min-width(1440px) {
+      width: 75%;
+    }
 
-		&.top-elm-filter {
-			display: block;
+    &.top-elm-filter {
+      display: block;
 
-			@include min-width(1025px) {
-				display: flex;
-			}
-		
-			@include min-width(1440px) {
-				width: 75%;
-			}
-	
-		}
+      @include min-width(1025px) {
+        display: flex;
+      }
+
+      @include min-width(1440px) {
+        width: 75%;
+      }
+    }
   }
 
   .top-elm-grid {
@@ -493,7 +492,7 @@
 
       @include min-width(1025px) {
         width: 25%;
-        padding-top: 45px;
+        padding-top: 25px;
         padding-left: 25px;
         padding-right: 0;
         padding-bottom: 46px;
@@ -526,21 +525,22 @@
           width: 50%;
         }
 
-				@include min-width(1440px) {
-					width: 45%;
-				}
+        @include min-width(1440px) {
+          width: 45%;
+        }
 
         > h2 {
           margin-top: 52px;
           margin-bottom: 0;
 
-					@include min-width(1025px) {
-						font-size: 48px;
-					}
+          @include min-width(1025px) {
+            margin-top: 0;
+            font-size: 48px;
+          }
 
-					@include min-width(1440px) {
-						font-size: 65px;
-					}
+          @include min-width(1440px) {
+            font-size: 65px;
+          }
         }
 
         > h3 {
@@ -568,37 +568,34 @@
             margin-top: 37px;
             font-size: 32px;
 
-						&.filter-subtitle {
-							font-size: 26px;
+            &.filter-subtitle {
+              font-size: 26px;
 
-							> span {
-								font-size: 26px;
-							}
-						}
+              > span {
+                font-size: 26px;
+              }
+            }
           }
 
+          @include min-width(1440px) {
+            &.filter-subtitle {
+              font-size: 32px;
 
-					@include min-width(1440px) {
-						&.filter-subtitle {
-							font-size: 32px;
-
-							> span {
-								font-size: 32px;
-							}
-						}
-					}
-
-
+              > span {
+                font-size: 32px;
+              }
+            }
+          }
 
           > .top-elm-grid-s2-tech-title {
-						@include min-width(1025px) {
-							font-size: 26px;
-						}
+            @include min-width(1025px) {
+              font-size: 26px;
+            }
 
-						@include min-width(1440px) {
-							font-size: 32px;
-						}
-						
+            @include min-width(1440px) {
+              font-size: 32px;
+            }
+
             > span {
               font-size: 18px;
               font-weight: 100;
@@ -608,7 +605,7 @@
                 font-size: 26px;
               }
 
-							@include min-width(1440px) {
+              @include min-width(1440px) {
                 font-size: 32px;
               }
             }
@@ -693,14 +690,14 @@
             margin-bottom: 30px;
           }
 
-					>video{
-						@include min-width(1025px) {
-							height: 450px;
-							position: relative;
-							z-index: 10;
-							margin: 0 auto;
-						}
-					}
+          > video {
+            @include min-width(1025px) {
+              height: 450px;
+              position: relative;
+              z-index: 10;
+              margin: 0 auto;
+            }
+          }
 
           > a {
             display: block;
@@ -734,34 +731,82 @@
               margin-top: 25px;
             }
 
-            &:before {
-              content: "";
-              width: 22px;
-              height: 8px;
-              display: block;
-              background: url("../images/icon/arrow-array-icon.svg") no-repeat
-                center/contain;
-              transform: scaleX(-1);
-              margin-right: 0.5rem;
-            }
-
-            &:after {
-              content: "";
-              width: 22px;
-              height: 8px;
-              display: block;
-              background: url("../images/icon/arrow-array-icon.svg") no-repeat
-                center/contain;
-              margin-left: 0.5rem;
-            }
-
             > a {
+							position: relative;
               padding: 4px 10px;
-              display: inline-block;
+              display: flex;
+							align-items: center;
               border: 1px solid #000;
               font-weight: 100;
               font-size: 16px;
               @include NotoSansTC-txt;
+							transition: .2s;
+
+							@include min-width(1025px) {
+								&:hover{
+									background-color: $color-black;
+									color: $color-white;
+								}
+							}
+
+							&:before {
+								content: "";
+								width: 22px;
+								height: 8px;
+								position: absolute;
+								left: -38px;
+								display: block;
+								background: url("../images/icon/arrow-array-icon.svg") no-repeat
+									center/contain;
+								transform: scaleX(-1);
+								margin-right: 0.5rem;
+	
+								@include min-width(1025px) {
+									transition: 0.2s;
+									animation: identifier1 1.3s linear infinite reverse;
+	
+									@keyframes identifier1 {
+										0% {
+											left: -40px;
+										}
+										50% {
+											left: -30px;
+										}
+										100% {
+											left: -40px;
+										}
+									}
+								}
+							}
+	
+							&:after {
+								content: "";
+								width: 22px;
+								height: 8px;
+								position: absolute;
+								right: -38px;
+								display: block;
+								background: url("../images/icon/arrow-array-icon.svg") no-repeat
+									center/contain;
+								margin-left: 0.5rem;
+	
+								@include min-width(1025px) {
+									transition: 0.2s;
+									animation: identifier2 1.3s linear infinite reverse;
+	
+									@keyframes identifier2 {
+										0% {
+											right: -40px;
+										}
+										50% {
+											right: -30px;
+										}
+										100% {
+											right: -40px;
+										}
+									}
+								}
+							}
             }
           }
 
@@ -781,17 +826,20 @@
       > .h2 {
         display: none;
 
-				@include min-width(1025px) {
-					display: block;
+        @include min-width(1025px) {
+          margin-top: 0;
+          display: block;
           color: $color-gray;
           font-weight: 100;
+          font-size: 48px;
+          line-height: 48px;
           @include roboto-txt;
-					font-size: 48px;
-				}
+        }
 
-				@include min-width(1440px) {
-					font-size: 65px;
-				}
+        @include min-width(1440px) {
+          font-size: 65px;
+          line-height: 65px;
+        }
       }
 
       > .h3 {
@@ -930,7 +978,7 @@
         @include min-width(1025px) {
           display: flex;
           justify-content: flex-end;
-          margin-top: 75px;
+          margin-top: 60px;
         }
 
         > li {
@@ -966,7 +1014,7 @@
         width: 33%;
       }
 
-			@include min-width(1440px) {
+      @include min-width(1440px) {
         width: 25%;
       }
     }
@@ -981,7 +1029,7 @@
 
       @include min-width(1025px) {
         width: 33%;
-        padding-top: 45px;
+        padding-top: 25px;
         padding-left: 25px;
         padding-right: 0;
         padding-bottom: 46px;
@@ -1156,10 +1204,9 @@
           margin-top: 60px;
         }
 
-
-				@include min-width(1440px) {
-					padding: 32px 42px;
-				}
+        @include min-width(1440px) {
+          padding: 32px 42px;
+        }
 
         &:before {
           content: "";
@@ -1226,7 +1273,9 @@
           margin-top: 60px;
           margin-bottom: 0.3rem;
           font-weight: 100;
+          font-size: 16px;
           color: $color-black;
+          transition: 0.2s;
           @include NotoSansTC-txt;
 
           &:before {
@@ -1255,6 +1304,10 @@
                 }
               }
             }
+          }
+
+          &:hover {
+            font-size: 18px;
           }
         }
       }
@@ -1296,6 +1349,10 @@
           }
         }
 
+        &:hover {
+          font-size: 18px;
+        }
+
         > div {
           > span {
             line-height: 1;
@@ -1316,7 +1373,7 @@
 
       @include min-width(1025px) {
         display: block;
-        margin-top: 40px;
+        margin-top: 25px;
         padding: 0;
         padding-left: 11px;
       }
@@ -1350,13 +1407,12 @@
               }
               figcaption {
                 > h3 {
-									opacity: 1;
-									
-									@include min-width(1025px) {
-										opacity: 0;
-										transition-delay: 0.3s;
-									}
+                  opacity: 1;
 
+                  @include min-width(1025px) {
+                    opacity: 0;
+                    transition-delay: 0.3s;
+                  }
                 }
                 > h4 {
                   @include min-width(1025px) {
@@ -1377,7 +1433,7 @@
 
                   @include min-width(1025px) {
                     width: 0px;
-										opacity: 0;
+                    opacity: 0;
                   }
                 }
 
@@ -1388,7 +1444,7 @@
 
                   @include min-width(1025px) {
                     height: 0px;
-										opacity: 0;
+                    opacity: 0;
                   }
                 }
               }
@@ -1427,7 +1483,6 @@
 
         @include min-width(1025px) {
           &:hover {
-
             &:after {
               opacity: 0;
               transition: all 0.2s ease;
@@ -1568,7 +1623,7 @@
                 right: 5px;
 
                 @include min-width(1025px) {
-									width: 30px;
+                  width: 30px;
                   top: 10px;
                   right: 10px;
                 }
@@ -1580,7 +1635,7 @@
                 right: 5px;
 
                 @include min-width(1025px) {
-									height: 30px;
+                  height: 30px;
                   top: 10px;
                   right: 10px;
                 }
@@ -1594,7 +1649,7 @@
                 right: 5px;
 
                 @include min-width(1025px) {
-									width: 30px;
+                  width: 30px;
                   bottom: 10px;
                   right: 10px;
                 }
@@ -1606,7 +1661,7 @@
                 right: 5px;
 
                 @include min-width(1025px) {
-									height: 30px;
+                  height: 30px;
                   bottom: 10px;
                   right: 10px;
                 }
@@ -1620,7 +1675,7 @@
                 left: 5px;
 
                 @include min-width(1025px) {
-									width: 30px;
+                  width: 30px;
                   top: 10px;
                   left: 10px;
                 }
@@ -1632,7 +1687,7 @@
                 left: 5px;
 
                 @include min-width(1025px) {
-									height: 30px;
+                  height: 30px;
                   top: 10px;
                   left: 10px;
                 }
@@ -1646,7 +1701,7 @@
                 left: 5px;
 
                 @include min-width(1025px) {
-									width: 30px;
+                  width: 30px;
                   bottom: 10px;
                   left: 10px;
                 }
@@ -1658,7 +1713,7 @@
                 left: 5px;
 
                 @include min-width(1025px) {
-									height: 30px;
+                  height: 30px;
                   bottom: 10px;
                   left: 10px;
                 }
@@ -1689,11 +1744,11 @@
           margin-bottom: 30px;
         }
 
-				@include min-width(1440px) {
-					width: 240px;
+        @include min-width(1440px) {
+          width: 240px;
           height: 152px;
-					margin-bottom: 20px;
-				}
+          margin-bottom: 20px;
+        }
 
         > a {
           > figure {
@@ -1774,10 +1829,10 @@
             display: block;
             border: 0.5px solid $color-white;
 
-						@include min-width(1440px) {
-							width: 262px;
-							height: 125px;
-						}
+            @include min-width(1440px) {
+              width: 262px;
+              height: 125px;
+            }
           }
         }
 
@@ -1928,9 +1983,9 @@
                   font-size: 18px;
                 }
 
-								@include min-width(1440px) {
-									font-size: 23px;
-								}
+                @include min-width(1440px) {
+                  font-size: 23px;
+                }
               }
 
               > h4 {
@@ -2802,7 +2857,7 @@
 
       @include min-width(1025px) {
         //height: calc(100vh - 153px);
-				display: block;
+        display: block;
         margin-top: 40px;
         padding-left: 12px;
       }
@@ -2811,25 +2866,25 @@
         position: relative;
         width: 238px;
         height: 163px;
-				margin-bottom: 72px;
+        margin-bottom: 72px;
 
-				@include min-width(1025px) {
-					&:hover{
-						> a {
-							.img-snip {
-								.img-snip-mask {
-									opacity: 0;
-								}
+        @include min-width(1025px) {
+          &:hover {
+            > a {
+              .img-snip {
+                .img-snip-mask {
+                  opacity: 0;
+                }
 
-								> figcaption {
-									>h3{
-										opacity: 0;
-									}
-								}
-							}
-						}
-					}
-				}
+                > figcaption {
+                  > h3 {
+                    opacity: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
 
         > a {
           > figure {
@@ -2838,12 +2893,12 @@
             }
 
             > figcaption {
-							display: none;
+              display: none;
 
-							@include min-width(1025px) {
-								display: block;
-								align-items: flex-start;
-							}
+              @include min-width(1025px) {
+                display: block;
+                align-items: flex-start;
+              }
 
               .figcaption-txt {
                 width: 100%;
@@ -2869,19 +2924,19 @@
           }
 
           .s4-item-tech-title {
-						position: absolute;
+            position: absolute;
             margin-top: 6px;
             text-align: center;
             font-size: 14px;
             color: $color-white;
-						opacity: 0.5;
+            opacity: 0.5;
 
-						@include min-width(1025px) {
-							position: static;
-							margin-top: 16px;
-							font-size: 18px;
-							opacity: 1;
-						}
+            @include min-width(1025px) {
+              position: static;
+              margin-top: 16px;
+              font-size: 18px;
+              opacity: 1;
+            }
           }
         }
 
@@ -2935,25 +2990,25 @@
             }
           }
 
-					.s4-item-tech-title {
-						opacity: 1;
-					}
+          .s4-item-tech-title {
+            opacity: 1;
+          }
           .img-snip-arrow {
             opacity: 1;
             transition-delay: 0.3s;
           }
         }
-				&.lock {
-					> a {
+        &.lock {
+          > a {
             .img-snip {
               figcaption {
                 > h3 {
                   opacity: 1;
-								}
-							}
-						}
-					}
-				}
+                }
+              }
+            }
+          }
+        }
 
         @include min-width(1025px) {
           &:before {
@@ -3140,25 +3195,24 @@
           display: none;
         }
 
-				>li{
-					width: 75px;
-					height: 75px;
-					margin-bottom: 0;
+        > li {
+          width: 75px;
+          height: 75px;
+          margin-bottom: 0;
 
-					&.open{
+          &.open {
+          }
 
-					}
+          &.current {
+            .img-snip-mask {
+              opacity: 0;
+            }
+          }
 
-					&.current{
-						.img-snip-mask{
-							opacity: 0;
-						}
-					}
-
-					>a{
-						position: relative;
-					}
-				}
+          > a {
+            position: relative;
+          }
+        }
       }
     }
   }
@@ -3253,7 +3307,7 @@
 
   .top-elm-grid-s2-1-tech {
     width: 100%;
-		height: 100%;
+    height: 100%;
     margin-top: 40px;
     padding: 0 25px;
     position: relative;
@@ -3264,15 +3318,15 @@
     @include min-width(1025px) {
       width: 40%;
       padding: 0;
-			margin: 0 auto;
+      margin: 0 auto;
       //margin-top: 154px;
     }
 
-		@include min-width(1440px) {
-			width: 55%;
-			height: 676px;
-			margin-top: 154px;
-		}
+    @include min-width(1440px) {
+      width: 55%;
+      height: 676px;
+      margin-top: 125px;
+    }
   }
 
   .top-elm-grid-s2-1-tech-3 {
@@ -3293,7 +3347,7 @@
 
     @include min-width(1025px) {
       width: 45%;
-			margin: 0 auto;
+      margin: 0 auto;
       position: relative;
       display: flex;
       justify-content: center;
@@ -3303,10 +3357,10 @@
         center/contain;
     }
 
-		@include min-width(1440px) {
-			height: 685px;
-			margin-top: 167px;
-		}
+    @include min-width(1440px) {
+      height: 685px;
+      margin-top: 167px;
+    }
   }
 
   .lecture-photo-bg-text {
@@ -3423,7 +3477,8 @@
       @include min-width(1025px) {
         display: flex;
         align-items: center;
-        font-size: 13px;
+        font-size: 16px;
+        transition: 0.2s;
         @include NotoSansTC-txt;
 
         &:before {
@@ -3434,6 +3489,28 @@
           margin-right: 1rem;
           background: url("../images/icon/button_black.svg") no-repeat
             center/contain;
+          transition: 0.2s;
+
+          @include min-width(1025px) {
+            animation: identifier3 1.3s cubic-bezier(0.86, 0.04, 1, 1) infinite
+              reverse;
+
+            @keyframes identifier3 {
+              0% {
+                transform: translateX(-10px);
+              }
+              50% {
+                transform: translateX(0px);
+              }
+              100% {
+                transform: translateX(-10px);
+              }
+            }
+          }
+        }
+
+        &:hover {
+          font-size: 18px;
         }
       }
     }
@@ -3467,13 +3544,12 @@
 
     @include min-width(1025px) {
       width: 35% !important;
-			margin-right: 40px;
+      margin-right: 40px;
     }
 
-		@include min-width(1440px) {
-			margin-right: 60px;
+    @include min-width(1440px) {
+      margin-right: 60px;
     }
-		
 
     &:after {
       content: "";
@@ -3481,10 +3557,14 @@
       height: calc(100% - 235px);
       position: absolute;
       top: 50%;
-      margin-top: -285px;
+      margin-top: -300px;
       right: 0;
       display: block;
       background-color: $color-black;
+
+      @include min-width(1440px) {
+        margin-top: -350px;
+      }
     }
   }
 
@@ -3518,7 +3598,7 @@
         margin-top: 39px;
         padding-left: 0;
         font-weight: 400;
-        font-size: 60px;
+        font-size: 50px;
       }
 
       &:before {
@@ -3555,7 +3635,7 @@
       display: none;
 
       @include min-width(1025px) {
-        margin-top: 53px;
+        margin-top: 33px;
         display: block;
       }
 
@@ -3574,7 +3654,7 @@
 
     @include min-width(1025px) {
       display: block;
-      margin-top: 48px;
+      margin-top: 40px;
     }
 
     > span {
@@ -3620,7 +3700,7 @@
         @include min-width(1025px) {
           margin-top: 0;
           padding-left: 0;
-          font-size: 48px;
+          font-size: 42px;
         }
       }
     }
@@ -3654,22 +3734,22 @@
       background: url("../images/icon/arrow-array-icon-white.svg") no-repeat
         center/contain;
 
-				@include min-width(1025px) {
-					transition: 0.2s;
-					animation: identifier1 1.3s linear infinite reverse;
-				
-					@keyframes identifier1 {
-						0% {
-							left: -40px;
-						}
-						50% {
-							left: -30px;
-						}
-						100% {
-							left: -40px;
-						}
-					}
-				}
+      @include min-width(1025px) {
+        transition: 0.2s;
+        animation: identifier1 1.3s linear infinite reverse;
+
+        @keyframes identifier1 {
+          0% {
+            left: -40px;
+          }
+          50% {
+            left: -30px;
+          }
+          100% {
+            left: -40px;
+          }
+        }
+      }
     }
 
     &:after {
@@ -3683,22 +3763,22 @@
         center/contain;
       transform: scaleX(-1);
 
-			@include min-width(1025px) {
-				transition: 0.2s;
-				animation: identifier2 1.3s linear infinite reverse;
-			
-				@keyframes identifier2 {
-					0% {
-						right: -40px;
-					}
-					50% {
-						right: -30px;
-					}
-					100% {
-						right: -40px;
-					}
-				}
-			}
+      @include min-width(1025px) {
+        transition: 0.2s;
+        animation: identifier2 1.3s linear infinite reverse;
+
+        @keyframes identifier2 {
+          0% {
+            right: -40px;
+          }
+          50% {
+            right: -30px;
+          }
+          100% {
+            right: -40px;
+          }
+        }
+      }
     }
 
     @include min-width(1025px) {
