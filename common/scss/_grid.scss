@@ -760,21 +760,18 @@
 									center/contain;
 								transform: scaleX(-1);
 								margin-right: 0.5rem;
-	
-								@include min-width(1025px) {
-									transition: 0.2s;
-									animation: identifier1 1.3s linear infinite reverse;
-	
-									@keyframes identifier1 {
-										0% {
-											left: -40px;
-										}
-										50% {
-											left: -30px;
-										}
-										100% {
-											left: -40px;
-										}
+								transition: 0.2s;
+								animation: identifier1 1.3s linear infinite reverse;
+
+								@keyframes identifier1 {
+									0% {
+										left: -40px;
+									}
+									50% {
+										left: -30px;
+									}
+									100% {
+										left: -40px;
 									}
 								}
 							}
@@ -789,21 +786,18 @@
 								background: url("../images/icon/arrow-array-icon.svg") no-repeat
 									center/contain;
 								margin-left: 0.5rem;
-	
-								@include min-width(1025px) {
-									transition: 0.2s;
-									animation: identifier2 1.3s linear infinite reverse;
-	
-									@keyframes identifier2 {
-										0% {
-											right: -40px;
-										}
-										50% {
-											right: -30px;
-										}
-										100% {
-											right: -40px;
-										}
+								transition: 0.2s;
+								animation: identifier2 1.3s linear infinite reverse;
+
+								@keyframes identifier2 {
+									0% {
+										right: -40px;
+									}
+									50% {
+										right: -30px;
+									}
+									100% {
+										right: -40px;
 									}
 								}
 							}
@@ -927,11 +921,28 @@
                 &.fb-icon {
                   background: url("../images/icon/fb_normal.svg") no-repeat
                     center/contain;
+										transition: .2s;
+
+										@include min-width(1025px) {
+											&:hover{
+												background: url("../images/icon/fb_normal-hover.svg") no-repeat
+                    center/contain;
+											}
+										}
                 }
 
                 &.ig-icon {
                   background: url("../images/icon/ig_normal.svg") no-repeat
                     center/contain;
+										transition: .2s;
+
+										@include min-width(1025px) {
+											&:hover{
+												background: url("../images/icon/ig_normal-hover.svg") no-repeat
+                    center/contain;
+											}
+										}
+										
                 }
               }
             }
@@ -996,11 +1007,27 @@
             &.fb-icon {
               background: url("../images/icon/fb_normal.svg") no-repeat
                 center/contain;
+								transition: .2s;
+
+								@include min-width(1025px) {
+									&:hover{
+										background: url("../images/icon/fb_normal-hover.svg") no-repeat
+								center/contain;
+									}
+								}
             }
 
             &.ig-icon {
               background: url("../images/icon/ig_normal.svg") no-repeat
                 center/contain;
+								transition: .2s;
+
+								@include min-width(1025px) {
+									&:hover{
+										background: url("../images/icon/ig_normal-hover.svg") no-repeat
+                center/contain;
+									}
+								}
             }
           }
         }
@@ -3529,6 +3556,25 @@
         margin-right: 1rem;
         background: url("../images/icon/button_black.svg") no-repeat
           center/contain;
+
+					transition: 0.2s;
+
+          @include max-width(1025px) {
+            animation: identifier3 1.3s cubic-bezier(0.86, 0.04, 1, 1) infinite
+              reverse;
+
+            @keyframes identifier3 {
+              0% {
+                transform: translateX(-10px);
+              }
+              50% {
+                transform: translateX(0px);
+              }
+              100% {
+                transform: translateX(-10px);
+              }
+            }
+          }
       }
 
       @include min-width(1025px) {
@@ -3816,6 +3862,23 @@
       display: block;
       background: url("../images/icon/arrow-array-icon-white.svg") no-repeat
         center/contain;
+
+				@include max-width(1025px) {
+					transition: 0.2s;
+					animation: identifier1 1.3s linear infinite reverse;
+	
+					@keyframes identifier1 {
+						0% {
+							left: -40px;
+						}
+						50% {
+							left: -30px;
+						}
+						100% {
+							left: -40px;
+						}
+					}
+				}
     }
 
     &:after {
@@ -3828,6 +3891,23 @@
       background: url("../images/icon/arrow-array-icon-white.svg") no-repeat
         center/contain;
       transform: scaleX(-1);
+
+			@include max-width(1025px) {
+        transition: 0.2s;
+        animation: identifier2 1.3s linear infinite reverse;
+
+        @keyframes identifier2 {
+          0% {
+            right: -40px;
+          }
+          50% {
+            right: -30px;
+          }
+          100% {
+            right: -40px;
+          }
+        }
+      }
     }
   }
 

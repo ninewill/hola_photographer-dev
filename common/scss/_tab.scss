@@ -168,7 +168,16 @@
       display: block;
       margin-left: 0.5rem;
       background: url("../images/icon/adobe-btn.svg") no-repeat center/contain;
+			transition: .2s;
     }
+
+		@include min-width(1025px) {
+			&:hover{
+				&:after{
+					background: url("../images/icon/adobe-btn-hover.svg") no-repeat center/contain;
+				}
+			}
+		}
   }
 }
 
