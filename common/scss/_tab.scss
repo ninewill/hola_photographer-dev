@@ -79,6 +79,10 @@
 
   @include min-width(1025px) {
     display: block;
+		margin-top: 280px;
+  }
+
+	@include min-width(1660px) {
     margin-top: 320px;
   }
 
