@@ -91,9 +91,9 @@
         padding-bottom: 46px;
       }
 
-			@include min-width(1660px) {
-				padding-top: 45px;
-			}
+      @include min-width(1660px) {
+        padding-top: 45px;
+      }
 
       .top-elm-1-txt {
         margin-top: 49px;
@@ -119,7 +119,7 @@
           font-size: 36px;
         }
 
-				@include min-width(1660px) {
+        @include min-width(1660px) {
           font-size: 48px;
         }
       }
@@ -145,7 +145,7 @@
           font-size: map-get($fontsize, 6);
         }
 
-				@include min-width(1660px) {
+        @include min-width(1660px) {
           margin-top: 70px;
         }
 
@@ -184,7 +184,7 @@
           font-size: map-get($fontsize, 6);
         }
 
-				@include min-width(1660px) {
+        @include min-width(1660px) {
           margin-top: 70px;
         }
 
@@ -211,7 +211,7 @@
           margin-top: 32px;
         }
 
-				@include min-width(1660px) {
+        @include min-width(1660px) {
           margin-top: 65px;
         }
 
@@ -315,11 +315,11 @@
       flex-direction: column;
       justify-content: space-between;
 
-			@include min-width(1440px) {
+      @include min-width(1440px) {
         margin-top: 25px;
       }
 
-			@include min-width(1660px) {
+      @include min-width(1660px) {
         margin-top: 180px;
       }
     }
@@ -494,7 +494,7 @@
       width: 75%;
     }
 
-		@include min-width(1600px) {
+    @include min-width(1600px) {
       width: 80%;
     }
 
@@ -724,15 +724,15 @@
 
           > video {
             @include min-width(1025px) {
-							width: 100%;
+              width: 100%;
               position: relative;
               z-index: 10;
               margin: 0 auto;
             }
 
-						@include min-width(1440px) {
-							width: 1060px;
-						}
+            @include min-width(1440px) {
+              width: 1060px;
+            }
           }
 
           > a {
@@ -768,75 +768,75 @@
             }
 
             > a {
-							position: relative;
+              position: relative;
               padding: 4px 10px;
               display: flex;
-							align-items: center;
+              align-items: center;
               border: 1px solid #000;
               font-weight: 100;
               font-size: 16px;
               @include NotoSansTC-txt;
-							transition: .2s;
+              transition: 0.2s;
 
-							@include min-width(1025px) {
-								&:hover{
-									background-color: $color-black;
-									color: $color-white;
-								}
-							}
+              @include min-width(1025px) {
+                &:hover {
+                  background-color: $color-black;
+                  color: $color-white;
+                }
+              }
 
-							&:before {
-								content: "";
-								width: 22px;
-								height: 8px;
-								position: absolute;
-								left: -38px;
-								display: block;
-								background: url("../images/icon/arrow-array-icon.svg") no-repeat
-									center/contain;
-								transform: scaleX(-1);
-								margin-right: 0.5rem;
-								transition: 0.2s;
-								animation: identifier1 1.3s linear infinite reverse;
+              &:before {
+                content: "";
+                width: 22px;
+                height: 8px;
+                position: absolute;
+                left: -38px;
+                display: block;
+                background: url("../images/icon/arrow-array-icon.svg") no-repeat
+                  center/contain;
+                transform: scaleX(-1);
+                margin-right: 0.5rem;
+                transition: 0.2s;
+                animation: identifier1 1.3s linear infinite reverse;
 
-								@keyframes identifier1 {
-									0% {
-										left: -40px;
-									}
-									50% {
-										left: -30px;
-									}
-									100% {
-										left: -40px;
-									}
-								}
-							}
-	
-							&:after {
-								content: "";
-								width: 22px;
-								height: 8px;
-								position: absolute;
-								right: -38px;
-								display: block;
-								background: url("../images/icon/arrow-array-icon.svg") no-repeat
-									center/contain;
-								margin-left: 0.5rem;
-								transition: 0.2s;
-								animation: identifier2 1.3s linear infinite reverse;
+                @keyframes identifier1 {
+                  0% {
+                    left: -40px;
+                  }
+                  50% {
+                    left: -30px;
+                  }
+                  100% {
+                    left: -40px;
+                  }
+                }
+              }
 
-								@keyframes identifier2 {
-									0% {
-										right: -40px;
-									}
-									50% {
-										right: -30px;
-									}
-									100% {
-										right: -40px;
-									}
-								}
-							}
+              &:after {
+                content: "";
+                width: 22px;
+                height: 8px;
+                position: absolute;
+                right: -38px;
+                display: block;
+                background: url("../images/icon/arrow-array-icon.svg") no-repeat
+                  center/contain;
+                margin-left: 0.5rem;
+                transition: 0.2s;
+                animation: identifier2 1.3s linear infinite reverse;
+
+                @keyframes identifier2 {
+                  0% {
+                    right: -40px;
+                  }
+                  50% {
+                    right: -30px;
+                  }
+                  100% {
+                    right: -40px;
+                  }
+                }
+              }
             }
           }
 
@@ -957,28 +957,27 @@
                 &.fb-icon {
                   background: url("../images/icon/fb_normal.svg") no-repeat
                     center/contain;
-										transition: .2s;
+                  transition: 0.2s;
 
-										@include min-width(1025px) {
-											&:hover{
-												background: url("../images/icon/fb_normal-hover.svg") no-repeat
-                    center/contain;
-											}
-										}
+                  @include min-width(1025px) {
+                    &:hover {
+                      background: url("../images/icon/fb_normal-hover.svg")
+                        no-repeat center/contain;
+                    }
+                  }
                 }
 
                 &.ig-icon {
                   background: url("../images/icon/ig_normal.svg") no-repeat
                     center/contain;
-										transition: .2s;
+                  transition: 0.2s;
 
-										@include min-width(1025px) {
-											&:hover{
-												background: url("../images/icon/ig_normal-hover.svg") no-repeat
-                    center/contain;
-											}
-										}
-										
+                  @include min-width(1025px) {
+                    &:hover {
+                      background: url("../images/icon/ig_normal-hover.svg")
+                        no-repeat center/contain;
+                    }
+                  }
                 }
               }
             }
@@ -1043,27 +1042,27 @@
             &.fb-icon {
               background: url("../images/icon/fb_normal.svg") no-repeat
                 center/contain;
-								transition: .2s;
+              transition: 0.2s;
 
-								@include min-width(1025px) {
-									&:hover{
-										background: url("../images/icon/fb_normal-hover.svg") no-repeat
-								center/contain;
-									}
-								}
+              @include min-width(1025px) {
+                &:hover {
+                  background: url("../images/icon/fb_normal-hover.svg")
+                    no-repeat center/contain;
+                }
+              }
             }
 
             &.ig-icon {
               background: url("../images/icon/ig_normal.svg") no-repeat
                 center/contain;
-								transition: .2s;
+              transition: 0.2s;
 
-								@include min-width(1025px) {
-									&:hover{
-										background: url("../images/icon/ig_normal-hover.svg") no-repeat
-                center/contain;
-									}
-								}
+              @include min-width(1025px) {
+                &:hover {
+                  background: url("../images/icon/ig_normal-hover.svg")
+                    no-repeat center/contain;
+                }
+              }
             }
           }
         }
@@ -1102,7 +1101,7 @@
         width: 25%;
       }
 
-			@include min-width(1600px) {
+      @include min-width(1600px) {
         width: 20%;
       }
     }
@@ -1189,11 +1188,11 @@
           margin-top: 15px;
         }
 
-				@include min-width(1440px) {
+        @include min-width(1440px) {
           margin-top: 15px;
         }
 
-				@include min-width(1660px) {
+        @include min-width(1660px) {
           margin-top: 37px;
         }
       }
@@ -1207,17 +1206,17 @@
         font-weight: 300;
 
         @include min-width(1025px) {
-					margin-top: 10px;
+          margin-top: 10px;
           padding: 20px 42px;
         }
 
-				@include min-width(1440px) {
+        @include min-width(1440px) {
           padding: 20px 42px;
         }
 
-				@include min-width(1660px) {
+        @include min-width(1660px) {
           padding: 32px 42px;
-					margin-top: 60px;
+          margin-top: 60px;
         }
 
         &:before {
@@ -1395,13 +1394,13 @@
           }
         }
 
-				@include min-width(1440px) {
+        @include min-width(1440px) {
           margin-top: 30px;
-				}
+        }
 
-				@include min-width(1660px) {
+        @include min-width(1660px) {
           margin-top: 60px;
-				}
+        }
       }
 
       .top-elm-grid-s2-tech-btn-m {
@@ -1476,9 +1475,18 @@
         position: relative;
 
         @include min-width(1025px) {
-          width: 156px;
-          height: 156px;
-          margin-bottom: 20px;
+          width: 60%;
+          height: auto;
+          margin-bottom: 30px;
+        }
+
+        @include min-width(1440px) {
+          width: 68%;
+          margin-bottom: 40px;
+        }
+
+        @include min-width(1600px) {
+          width: 43%;
         }
 
         &:last-child {
@@ -1547,8 +1555,8 @@
         &:before {
           @include min-width(1025px) {
             content: "";
-            width: 178px;
-            height: 125px;
+            width: 115%;
+            height: 80%;
             position: absolute;
             left: -11px;
             top: 15px;
@@ -1570,6 +1578,10 @@
               center/contain;
             opacity: 1;
             transition: all 0.2s ease;
+          }
+
+          @include min-width(1600px) {
+            right: -70%;
           }
         }
 
@@ -1620,7 +1632,12 @@
 
         > a {
           .img-snip {
+            width: 100%;
             position: relative;
+
+            > img {
+              width: 100%;
+            }
 
             .img-snip-mask {
               width: 100%;
@@ -1832,7 +1849,7 @@
 
         @include min-width(1025px) {
           width: 60%;
-					height: auto;
+          height: auto;
           margin-bottom: 30px;
         }
 
@@ -1841,15 +1858,15 @@
           margin-bottom: 40px;
         }
 
-				@include min-width(1600px) {
-					width: 70%;
-				}
+        @include min-width(1600px) {
+          width: 70%;
+        }
 
         > a {
           > figure {
-						>img{
-							width: 100%;
-						}
+            > img {
+              width: 100%;
+            }
             > figcaption {
               > span {
                 display: none;
@@ -1919,8 +1936,8 @@
         &:before {
           @include min-width(1025px) {
             content: "";
-						width: 110%;
-						height: 80%;
+            width: 110%;
+            height: 80%;
             position: absolute;
             left: -11px;
             top: 15px;
@@ -2198,11 +2215,24 @@
         position: relative;
 
         @include min-width(1025px) {
-          width: 238px;
+          width: 66%;
           height: auto;
           display: block;
           margin-right: 0;
-          margin-bottom: 20px;
+          margin-bottom: 30px;
+        }
+
+				//@include min-width(1200px) {
+				//	width: 66%;
+				//}
+
+        @include min-width(1440px) {
+          width: 68%;
+          margin-bottom: 40px;
+        }
+
+        @include min-width(1600px) {
+          width: 70%;
         }
 
         > a {
@@ -2250,7 +2280,9 @@
         }
 
         .img-snip-arrow {
-          @include min-width(1025px) {
+          display: none;
+
+          @include min-width(1440px) {
             width: 47px;
             height: 46px;
             position: absolute;
@@ -2262,6 +2294,10 @@
               center/contain;
             opacity: 1;
             transition: all 0.4s ease;
+          }
+
+          @include min-width(1600px) {
+            display: none;
           }
         }
 
@@ -2319,8 +2355,8 @@
         &:before {
           @include min-width(1025px) {
             content: "";
-            width: 262px;
-            height: 135px;
+            width: 110%;
+            height: 60%;
             position: absolute;
             left: -12px;
             top: 15px;
@@ -2466,6 +2502,7 @@
               }
 
               > h4 {
+                display: block;
                 margin-top: 0.5rem;
                 font-weight: 100;
                 color: $color-white;
@@ -2473,6 +2510,18 @@
                 opacity: 1;
                 transition: all 0.4s ease;
                 @include NotoSansTC-txt;
+
+                @include min-width(1024px) {
+                  display: none;
+                }
+
+                @include min-width(1440px) {
+                  display: block;
+                }
+
+                @include min-width(1600px) {
+                  display: none;
+                }
               }
             }
           }
@@ -2564,7 +2613,7 @@
 
     .s4-item-tech-m {
       display: flex;
-			justify-content: space-between;
+      justify-content: space-between;
       margin-top: 20px;
 
       @include min-width(1025px) {
@@ -2951,7 +3000,7 @@
 
       @include min-width(1025px) {
         //height: calc(100vh - 153px);
-				width: 100%;
+        width: 100%;
         display: block;
         margin-top: 40px;
       }
@@ -2962,7 +3011,7 @@
         margin-bottom: 30px;
 
         @include min-width(1025px) {
-					width: 70%;
+          width: 70%;
           &:hover {
             > a {
               .img-snip {
@@ -2980,17 +3029,17 @@
           }
         }
 
-				@include min-width(1200px) {
-					width: 60%;
-				}
+        @include min-width(1200px) {
+          width: 60%;
+        }
 
-				@include min-width(1400px) {
-					width: 68%;
-				}
+        @include min-width(1400px) {
+          width: 68%;
+        }
 
-				@include min-width(1600px) {
-					width: 70%;
-				}
+        @include min-width(1600px) {
+          width: 70%;
+        }
 
         > a {
           > figure {
@@ -3120,7 +3169,7 @@
           &:before {
             content: "";
             width: 110%;
-						height: 60%;
+            height: 60%;
             position: absolute;
             left: -12px;
             top: 20px;
@@ -3331,7 +3380,7 @@
       margin-top: 15px;
     }
 
-		@include min-width(1660px) {
+    @include min-width(1660px) {
       display: block;
       margin-top: 50px;
     }
@@ -3340,9 +3389,9 @@
       margin-top: 18px;
       border: 1px solid #808080;
 
-			@include min-width(1660px) {
-				margin-top: 36px;
-			}
+      @include min-width(1660px) {
+        margin-top: 36px;
+      }
 
       &:first-child {
         margin-top: 0;
@@ -3356,10 +3405,9 @@
 
         > figure {
           > img {
-          
-						@include min-width(1660px) {
-							height: 100%;
-						}
+            @include min-width(1660px) {
+              height: 100%;
+            }
           }
         }
         > p {
@@ -3370,10 +3418,10 @@
           font-weight: 300;
           @include NotoSansTC-txt;
 
-					@include min-width(1660px) {
-						margin-left: 30px;
-						padding: 27px;
-					}
+          @include min-width(1660px) {
+            margin-left: 30px;
+            padding: 27px;
+          }
         }
 
         > span {
@@ -3484,7 +3532,7 @@
       margin-top: 127px;
     }
 
-		@include min-width(1660px) {
+    @include min-width(1660px) {
       margin-top: 167px;
     }
   }
@@ -3554,9 +3602,9 @@
     align-items: center;
     justify-content: space-between;
 
-		@include min-width(1660px) {
-			margin-top: 33px;
-		}
+    @include min-width(1660px) {
+      margin-top: 33px;
+    }
 
     .lecture-time-wrap-left {
       .lecture-time-wrap-left-info {
@@ -3660,24 +3708,24 @@
         background: url("../images/icon/button_black.svg") no-repeat
           center/contain;
 
-					transition: 0.2s;
+        transition: 0.2s;
 
-          @include max-width(1025px) {
-            animation: identifier3 1.3s cubic-bezier(0.86, 0.04, 1, 1) infinite
-              reverse;
+        @include max-width(1025px) {
+          animation: identifier3 1.3s cubic-bezier(0.86, 0.04, 1, 1) infinite
+            reverse;
 
-            @keyframes identifier3 {
-              0% {
-                transform: translateX(-10px);
-              }
-              50% {
-                transform: translateX(0px);
-              }
-              100% {
-                transform: translateX(-10px);
-              }
+          @keyframes identifier3 {
+            0% {
+              transform: translateX(-10px);
+            }
+            50% {
+              transform: translateX(0px);
+            }
+            100% {
+              transform: translateX(-10px);
             }
           }
+        }
       }
 
       @include min-width(1025px) {
@@ -3712,12 +3760,12 @@
       background-color: $color-black;
 
       @include min-width(1440px) {
-				height: calc(100% - 150px);
+        height: calc(100% - 150px);
         margin-top: -350px;
       }
 
-			@include min-width(1660px) {
-				height: calc(100% - 235px);
+      @include min-width(1660px) {
+        height: calc(100% - 235px);
         margin-top: -350px;
       }
     }
@@ -3795,6 +3843,7 @@
       }
 
       img {
+				width: 50%;
         margin: 0 auto;
       }
     }
@@ -3811,10 +3860,10 @@
       display: block;
       margin-top: 20px;
     }
-	
-		@include min-width(1660px) {
-			margin-top: 40px;
-		}
+
+    @include min-width(1660px) {
+      margin-top: 40px;
+    }
 
     > span {
       display: block;
@@ -3883,13 +3932,13 @@
       transition: 0.2s;
     }
 
-		@include min-width(1440px) {
-			margin-top: 25px;
-		}
-	
-		@include min-width(1660px) {
-			margin-top: 52px;
-		}
+    @include min-width(1440px) {
+      margin-top: 25px;
+    }
+
+    @include min-width(1660px) {
+      margin-top: 52px;
+    }
 
     &:before {
       content: "";
@@ -3984,22 +4033,22 @@
       background: url("../images/icon/arrow-array-icon-white.svg") no-repeat
         center/contain;
 
-				@include max-width(1025px) {
-					transition: 0.2s;
-					animation: identifier1 1.3s linear infinite reverse;
-	
-					@keyframes identifier1 {
-						0% {
-							left: -40px;
-						}
-						50% {
-							left: -30px;
-						}
-						100% {
-							left: -40px;
-						}
-					}
-				}
+      @include max-width(1025px) {
+        transition: 0.2s;
+        animation: identifier1 1.3s linear infinite reverse;
+
+        @keyframes identifier1 {
+          0% {
+            left: -40px;
+          }
+          50% {
+            left: -30px;
+          }
+          100% {
+            left: -40px;
+          }
+        }
+      }
     }
 
     &:after {
@@ -4013,7 +4062,7 @@
         center/contain;
       transform: scaleX(-1);
 
-			@include max-width(1025px) {
+      @include max-width(1025px) {
         transition: 0.2s;
         animation: identifier2 1.3s linear infinite reverse;
 
